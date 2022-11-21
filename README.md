@@ -4,6 +4,7 @@
 
 ### Redis 源码结构
 
+```c
 redis1.0
 |                   //主体
 |-redis.c               //逻辑
@@ -20,6 +21,7 @@ redis1.0
 |-qpsort.c              //排序
 |-benchmark.c           //benchmark
 |-lzf.c                 //压缩算法
+```
 
 ### 核心概念
 
