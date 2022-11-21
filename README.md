@@ -124,13 +124,13 @@ static void initServer() {
 
   - 结构
 
-  ```
-  DB
-   |-->Expire
-   |-->Data-->hashtable-->table
-  		          |-->(entry-->entry)
+    ```
+    DB
+     |-->Expire
+     |-->Data-->hashtable-->table
     		          |-->(entry-->entry)
-  ```
+      		          |-->(entry-->entry)
+    ```
   - expire: 单线程，扫描成本太大， 不能扫描删除过期data， 只能用这个Key的时候check是否过期，过期则删掉值，返回空（lazy delete）：双字典+lazydelete
   - rehash: 渐进哈希，扩容，rehash
 - RedisObj
